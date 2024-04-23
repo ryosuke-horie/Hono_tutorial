@@ -2,8 +2,9 @@ import { Hono } from "hono";
 
 const app = new Hono();
 
+// rawResponseを返すパターン
 app.get("/", (c) => {
-  return c.text("Hello Hono!");
+  return new Response("Good morning!");
 });
 
 // リクエストとJson
